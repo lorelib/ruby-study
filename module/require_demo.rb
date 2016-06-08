@@ -1,3 +1,7 @@
+$LOAD_PATH << '.'
 
-class Require_demo
-end
+require 'module/trig'
+require 'module/moral'
+
+y = Trig.sin(Trig::PI/4)
+wrongdoing = Moral.sin(Moral::BAD)
