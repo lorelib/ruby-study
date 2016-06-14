@@ -1,10 +1,9 @@
 # windows上安装mysql、sqlite组件有问题，未测
 require "dbi"
-require "sqlite3"
 
 begin
   # 连接到Mysql服务器
-  dbh = DBI.connect("DBI:Sqlite3:TESTDB:localhost")
+  dbh = DBI.connect("DBI:Mysql:mysql:localhost", "root", "123456")
 
   # 获取服务器版本字符串，并显示
   row = dbh.select_one("SELECT VERSION()")
